@@ -11,12 +11,12 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/',async (req, res) => {
+app.post('/', (req, res) => {
     try{
-        const name = req.body.name;
-        const email = req.body.email;
+        const numberOfBeers = req.body.name;
+        // const email = req.body.email;
         
-        console.log('Received data:', { name, email });
+        console.log('number of beers:', { numberOfBeers });
         
         
         // Send a response
@@ -34,8 +34,6 @@ app.post('/',async (req, res) => {
         //   await page.click('input[type="submit"][name="x"][value="Calculate"]');
         //   const alcoholConcentration = await page.$eval('p.verybigtext', element => element.textContent);
         //   console.log('your blood alcohol concentration is:'+ alcoholConcentration);
-
-        // //   await page.screenshot({ path: 'page.png', fullPage: 'true' });
 
         //   await page.close();
         //   res.send('your blood alcohol concentration is :' + alcoholConcentration);
