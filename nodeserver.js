@@ -49,10 +49,7 @@ app.get('/', (req, res) => {
     res.send('Hello, world! This is the root route.');
 });
 
-// Define additional routes as needed
-// app.get('/about', (req, res) => {
-//     res.send('About page - This is the about route.');
-// });
+
 
 // Start the server and make it listen for incoming requests
 app.listen(PORT, () => {
