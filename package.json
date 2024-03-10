@@ -5,7 +5,8 @@
   "main": "nodeserver.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install":"npm install express && npm install puppeteer npm install cors && npx puppeteer browsers install chrome",
+    "install":"npm install express && npm install puppeteer npm install cors",
+    "installChorme":"npx puppeteer browsers install chrome",
     "start":"node nodeserver.js"
   },
   "author": "",
