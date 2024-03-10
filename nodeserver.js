@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/', (req, res) => {
+app.post('/',async (req, res) => {
     try{
         const numberOfBeers = req.body.name;
         // const email = req.body.email;
