@@ -21,24 +21,24 @@ app.post('/',async (req, res) => {
         
         // Send a response
       
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
+        // const browser = await puppeteer.launch();
+        // const page = await browser.newPage();
 
-        await page.goto('https://www.calculator.net/bac-calculator.html');
-        await page.type('input[name="ba"]', req.body.name);
-        await page.evaluate(() => {
-            const inputField = document.querySelector('input[name="ba"]');
-            const event = new Event('keyup');
-            inputField.dispatchEvent(event);
-          });
-          await page.click('input[type="submit"][name="x"][value="Calculate"]');
-          const alcoholConcentration = await page.$eval('p.verybigtext', element => element.textContent);
-          console.log('your blood alcohol concentration is:'+ alcoholConcentration);
+        // await page.goto('https://www.calculator.net/bac-calculator.html');
+        // await page.type('input[name="ba"]', req.body.name);
+        // await page.evaluate(() => {
+        //     const inputField = document.querySelector('input[name="ba"]');
+        //     const event = new Event('keyup');
+        //     inputField.dispatchEvent(event);
+        //   });
+        //   await page.click('input[type="submit"][name="x"][value="Calculate"]');
+        //   const alcoholConcentration = await page.$eval('p.verybigtext', element => element.textContent);
+        //   console.log('your blood alcohol concentration is:'+ alcoholConcentration);
 
-        //   await page.screenshot({ path: 'page.png', fullPage: 'true' });
+        // //   await page.screenshot({ path: 'page.png', fullPage: 'true' });
 
-          await page.close();
-          res.send('your blood alcohol concentration is :' + alcoholConcentration);
+        //   await page.close();
+        //   res.send('your blood alcohol concentration is :' + alcoholConcentration);
     }catch(error){
         console.error(error);
     }
