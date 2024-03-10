@@ -5,7 +5,7 @@
   "main": "nodeserver.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install":"npm install express && npm install puppeteer && npm install cores",
+    "install":"npm install express && npm install puppeteer",
     "start":"node nodeserver.js"
   },
   "author": "",
