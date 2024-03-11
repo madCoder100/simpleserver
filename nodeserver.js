@@ -22,6 +22,11 @@ app.post('/',async (req, res) => {
         // Send a response
       
         const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+           executablePath: '/path/to/chromium/executable', // Replace this with the actual path to the Chromium executable
+           headless: true // Set to true for headless mode
+       });
+
         const page = await browser.newPage();
 
         await page.goto('https://www.calculator.net/bac-calculator.html');
